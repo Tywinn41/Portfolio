@@ -22,7 +22,7 @@
             --muted:   #64748b;
             --border:  rgba(0,229,255,0.12);
             --border2: rgba(0,229,255,0.25);
-            --mono:    'Space Mono', monospace; 
+            --mono:    'Space Mono', monospace;
             --display: 'Syne', sans-serif;
         }
 
@@ -651,70 +651,172 @@
         <div class="section-label">// 03. Compétences</div>
         <h2 class="section-title">Arsenal technique</h2>
         <div class="section-line"></div>
-        <div class="skills-grid">
+
+        <!-- Tableau compétences BTS -->
+        <div style="margin-bottom:3rem;">
+            <div style="font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.25rem;">
+                <i class="fas fa-table" style="margin-right:.5rem"></i>Compétences du BTS SIO SISR
+            </div>
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:.78rem;min-width:600px;">
+                <thead>
+                    <tr>
+                        <th style="background:rgba(0,229,255,.1);color:var(--accent);font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem;text-align:left;border:1px solid var(--border2);width:40%;">Compétence</th>
+                        <th style="background:rgba(0,229,255,.1);color:var(--accent);font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1rem;text-align:left;border:1px solid var(--border2);">Réalisation(s) associée(s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border:1px solid var(--border);">
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--text);font-weight:600;">GP — Gérer le patrimoine informatique</td>
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--muted);">TP Sécurisation commutateur Cisco · TP AD Windows Server · Stage CHU (Octopus/OCS) · Stage BA709 (PXE)</td>
+                    </tr>
+                    <tr style="background:rgba(0,229,255,.02);border:1px solid var(--border);">
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--text);font-weight:600;">RI — Répondre aux incidents et demandes</td>
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--muted);">Stage CHU (ticketing Octopus) · Stage BA709 (support utilisateurs) · TP Fail2Ban · TP Supervision Zabbix</td>
+                    </tr>
+                    <tr style="border:1px solid var(--border);">
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--text);font-weight:600;">DO — Développer la présence en ligne</td>
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--muted);">Création de ce portfolio · Hébergement GitHub Pages</td>
+                    </tr>
+                    <tr style="background:rgba(0,229,255,.02);border:1px solid var(--border);">
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--text);font-weight:600;">TP — Travailler en mode projet</td>
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--muted);">TP VPN SecureLab SARL · Stage BA709 (migration Orange → UniPro) · TP AD Windows Server 2022</td>
+                    </tr>
+                    <tr style="border:1px solid var(--border);">
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--text);font-weight:600;">MP — Mettre à disposition un service</td>
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--muted);">TP Pare-feu Linux · TP VPN OpenVPN · TP Supervision Zabbix · TP DNS Niveau 2 · Stage BA709 (déploiement postes PXE)</td>
+                    </tr>
+                    <tr style="background:rgba(0,229,255,.02);border:1px solid var(--border);">
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--text);font-weight:600;">DP — Organiser son développement professionnel</td>
+                        <td style="padding:.65rem 1rem;border:1px solid var(--border);color:var(--muted);">TP Supervision Zabbix · TP AD Windows Server · Admission Bachelor CESI Angoulême · Ce portfolio</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <!-- Cartes compétences techniques avec description -->
+        <div style="font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.25rem;">
+            <i class="fas fa-laptop-code" style="margin-right:.5rem"></i>Compétences techniques
+        </div>
+        <style>
+        .logo-row { display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-top:.85rem; }
+        .logo-row img { height:30px;width:auto;object-fit:contain;transition:opacity .2s; }
+        .logo-row img:hover { opacity:.8; }
+        .lbadge { font-weight:700;font-size:.72rem;padding:.25rem .6rem;border-radius:4px;letter-spacing:.03em;white-space:nowrap; }
+        </style>
+        <div class="skills-grid" style="margin-bottom:3rem;">
+
+            <!-- Serveurs -->
             <div class="skill-card">
                 <div class="skill-card-icon"><i class="fas fa-server"></i></div>
-                <h3>Virtualisation</h3>
-                <p>Déploiement et gestion d'environnements virtualisés pour labs et production.</p>
-                <div class="tags">
-                    <span class="tag">Proxmox</span>
-                    <span class="tag">VMware</span>
-                    <span class="tag">VirtualBox</span>
+                <h3>Serveurs Linux & Windows</h3>
+                <p>Gestion d'un serveur Linux (Apache, Nginx) ou Windows avec Active Directory, DHCP, DNS.</p>
+                <div class="logo-row">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original-wordmark.svg" alt="Apache">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="Nginx">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows">
                 </div>
             </div>
-            <div class="skill-card">
-                <div class="skill-card-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Pare-feu &amp; Sécurité</h3>
-                <p>Configuration de règles de filtrage, NAT et politiques de sécurité réseau.</p>
-                <div class="tags">
-                    <span class="tag r">pfSense</span>
-                    <span class="tag r">iptables</span>
-                    <span class="tag r">nftables</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-card-icon"><i class="fas fa-network-wired"></i></div>
-                <h3>Réseaux</h3>
-                <p>Conception et administration d'infrastructures réseau segmentées et sécurisées.</p>
-                <div class="tags">
-                    <span class="tag">VLAN</span>
-                    <span class="tag">DNS</span>
-                    <span class="tag">DHCP</span>
-                    <span class="tag">IPv4/IPv6</span>
-                    <span class="tag">VPN</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-card-icon"><i class="fas fa-desktop"></i></div>
-                <h3>Systèmes</h3>
-                <p>Administration de systèmes d'exploitation serveur et postes clients.</p>
-                <div class="tags">
-                    <span class="tag g">Linux Debian</span>
-                    <span class="tag g">Ubuntu</span>
-                    <span class="tag">Windows Server</span>
-                </div>
-            </div>
+
+            <!-- Supervision -->
             <div class="skill-card">
                 <div class="skill-card-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Supervision</h3>
-                <p>Monitoring temps réel, alerting et tableaux de bord d'infrastructure.</p>
-                <div class="tags">
-                    <span class="tag p">Zabbix</span>
-                    <span class="tag p">Prometheus</span>
-                    <span class="tag p">Grafana</span>
+                <h3>Supervision & Monitoring</h3>
+                <p>Installation, création de tableaux de bord, mise en place d'alertes sur infrastructure.</p>
+                <div class="logo-row">
+                    <span class="lbadge" style="background:#d40000;color:#fff;font-size:.8rem;">ZABBIX</span>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original-wordmark.svg" alt="Grafana">
                 </div>
             </div>
+
+            <!-- Pare-feu -->
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Pare-feu & Sécurité</h3>
+                <p>Configuration pare-feu (installation, routage, gestion des règles NAT/filtrage).</p>
+                <div class="logo-row">
+                    <span class="lbadge" style="background:#003399;color:#fff;">pfSense</span>
+                    <span class="lbadge" style="background:#1a1a2e;color:#00e5ff;border:1px solid #00e5ff;">iptables</span>
+                    <span class="lbadge" style="background:#2b6fa8;color:#fff;">KALI</span>
+                    <span class="lbadge" style="background:#c0392b;color:#fff;">Fail2Ban</span>
+                </div>
+            </div>
+
+            <!-- Gestion parc -->
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="fas fa-ticket-alt"></i></div>
+                <h3>Gestion de parc & Ticketing</h3>
+                <p>Gestion du parc informatique avec système de ticketing et inventaire matériel.</p>
+                <div class="logo-row">
+                    <span class="lbadge" style="background:#1f85cc;color:#fff;">GLPI</span>
+                    <span class="lbadge" style="background:#e8701a;color:#fff;">OCS</span>
+                    <span class="lbadge" style="background:#0078d4;color:#fff;">Octopus</span>
+                </div>
+            </div>
+
+            <!-- Réseaux -->
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Conception réseaux</h3>
+                <p>Conception de réseaux logiques, routage inter-VLAN, VPN, DHCP, DNS.</p>
+                <div class="logo-row">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cisco/cisco-original.svg" alt="Cisco">
+                    <span class="lbadge" style="background:#f08705;color:#fff;">draw.io</span>
+                    <span class="lbadge" style="background:#1a1a2e;color:#00ff9d;border:1px solid #00ff9d;">Bind9</span>
+                </div>
+            </div>
+
+            <!-- Virtualisation -->
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="fas fa-desktop"></i></div>
+                <h3>Virtualisation & VMs</h3>
+                <p>Création et manipulation de VMs Linux en CLI ou GUI : réseau, pare-feu, VLAN, DHCP, DNS.</p>
+                <div class="logo-row">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vmware/vmware-original.svg" alt="VMware">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="VirtualBox">
+                    <span class="lbadge" style="background:#e57000;color:#fff;">Proxmox</span>
+                </div>
+            </div>
+
+            <!-- Scripting -->
             <div class="skill-card">
                 <div class="skill-card-icon"><i class="fas fa-code"></i></div>
-                <h3>Scripting &amp; DevOps</h3>
-                <p>Automatisation des tâches d'administration et déploiement d'infrastructure.</p>
-                <div class="tags">
-                    <span class="tag y">Bash</span>
-                    <span class="tag y">PowerShell</span>
-                    <span class="tag y">Docker</span>
-                    <span class="tag y">Terraform</span>
+                <h3>Scripting & Automatisation</h3>
+                <p>Automatisation des tâches d'administration système et réseau.</p>
+                <div class="logo-row">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" alt="Bash">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/powershell/powershell-original.svg" alt="PowerShell">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python">
                 </div>
             </div>
+
+            <!-- Cybersécurité offensive -->
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="fas fa-bug"></i></div>
+                <h3>Cybersécurité offensive</h3>
+                <p>Simulation d'attaques (force brute, MAC Flooding, DHCP Starvation) en environnement contrôlé.</p>
+                <div class="logo-row">
+                    <span class="lbadge" style="background:#2b6fa8;color:#fff;">Kali Linux</span>
+                    <span class="lbadge" style="background:#1679a7;color:#fff;">Wireshark</span>
+                    <span class="lbadge" style="background:#c0392b;color:#fff;">Hydra</span>
+                    <span class="lbadge" style="background:#2c3e50;color:#fff;">macof</span>
+                </div>
+            </div>
+
+            <!-- PKI -->
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="fas fa-lock"></i></div>
+                <h3>PKI & Chiffrement</h3>
+                <p>Mise en place d'une PKI interne, génération et gestion de certificats X.509, tunnel VPN.</p>
+                <div class="logo-row">
+                    <span class="lbadge" style="background:#721817;color:#fff;">OpenSSL</span>
+                    <span class="lbadge" style="background:#ea7e20;color:#fff;">OpenVPN</span>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ssh/ssh-original-wordmark.svg" alt="SSH">
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
